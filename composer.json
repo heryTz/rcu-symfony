@@ -1,0 +1,22 @@
+{
+    "name": "herytz/rcu-bundle",
+    "description": "Symfony bundle for Resumable Chunk Upload",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Herytz\\RcuBundle\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hery Nirintsoa",
+            "email": "hhery889@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "symfony/framework-bundle": "^7.1",
+        "symfony/http-kernel": "^7.1"
+    }
+}

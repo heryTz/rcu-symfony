@@ -1,0 +1,4 @@
+services:
+  Herytz\RcuBundle\Controller\RcuController:
+    autowire: true
+    autoconfigure: true
