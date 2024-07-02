@@ -17,6 +17,10 @@ class JsonStoreProvider implements StoreProviderInterface
 
   public function getItem(string $id): ?Upload
   {
+    if (!file_exists($this->storeDir)) {
+      mkdir($this->storeDir, recursive: true);
+    }
+
     $filename = $this->storeDir . '/' . $id . '.json';
     if (!file_exists($filename)) {
       return null;
