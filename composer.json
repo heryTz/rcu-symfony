@@ -17,6 +17,7 @@
     "minimum-stability": "stable",
     "require": {
         "symfony/framework-bundle": "^7.1",
-        "symfony/http-kernel": "^7.1"
+        "symfony/http-kernel": "^7.1",
+        "symfony/validator": "^7.1"
     }
 }
