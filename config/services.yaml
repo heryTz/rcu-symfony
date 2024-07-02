@@ -1,4 +1,15 @@
 services:
+
   Herytz\RcuBundle\Controller\RcuController:
     autowire: true
     autoconfigure: true
+    arguments:
+      $tmpDir: '%rcu.tmp_dir%'
+      $outputDir: '%rcu.output_dir%'
+
+  Herytz\RcuBundle\Contract\StoreProviderInterface:
+    class: Herytz\RcuBundle\StoreProvider\JsonStoreProvider
+    autowire: true
+    autoconfigure: true
+    arguments:
+      $storeDir: '%rcu.json_store_dir%'

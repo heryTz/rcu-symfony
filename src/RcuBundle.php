@@ -15,8 +15,9 @@ final class RcuBundle extends AbstractBundle
       ->children()
       ->scalarNode('upload_status_path')->defaultValue('/uploadStatus')->end()
       ->scalarNode('upload_path')->defaultValue('/upload')->end()
-      ->scalarNode('tmp_dir')->defaultValue('tmp')->end()
-      ->scalarNode('output_dir')->defaultValue('tmp')->end()
+      ->scalarNode('tmp_dir')->defaultValue('%kernel.project_dir%/tmp/chunks')->end()
+      ->scalarNode('output_dir')->defaultValue('%kernel.project_dir%/tmp/output')->end()
+      ->scalarNode('json_store_dir')->defaultValue('%kernel.project_dir%/tmp/store')->end()
       ->end();
   }
 
@@ -28,5 +29,6 @@ final class RcuBundle extends AbstractBundle
     $container->parameters()->set('rcu.upload_path', $config['upload_path']);
     $container->parameters()->set('rcu.tmp_dir', $config['tmp_dir']);
     $container->parameters()->set('rcu.output_dir', $config['output_dir']);
+    $container->parameters()->set('rcu.json_store_dir', $config['json_store_dir']);
   }
 }
